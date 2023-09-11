@@ -64,7 +64,7 @@ class Settings extends StatelessWidget {
               mainAxisSize: MainAxisSize.min,
               children: [
                 ListTile(
-                  title: Text('6'),
+                  title: const Text('Dark Mode'),
                   leading: Image.asset(
                     ImageAsset.theme,
                     height: 30,
@@ -78,7 +78,7 @@ class Settings extends StatelessWidget {
                 const Divider(),
                 ListTile(
                   onTap: () {},
-                  title: Text('7'),
+                  title: const Text('Change Language'),
                   leading: Image.asset(
                     ImageAsset.language,
                     height: 30,
@@ -87,7 +87,7 @@ class Settings extends StatelessWidget {
                 const Divider(),
                 ListTile(
                   onTap: () {},
-                  title: Text('8'),
+                  title: const Text('Help'),
                   leading: Image.asset(
                     ImageAsset.help,
                     height: 30,
@@ -96,7 +96,7 @@ class Settings extends StatelessWidget {
                 const Divider(),
                 ListTile(
                   onTap: () {},
-                  title: Text('9'),
+                  title: const Text('About'),
                   leading: Image.asset(
                     ImageAsset.about,
                     height: 25,
@@ -106,22 +106,23 @@ class Settings extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 5),
-          Container(
-            child: Card(
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(15.0),
+          Card(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(15.0),
+            ),
+            child: ListTile(
+              onTap: () {
+                Navigator.of(context)
+                    .pushNamedAndRemoveUntil("auth", (route) => true);
+              },
+              title: const Text(
+                'Log Out',
+                style: TextStyle(color: AppColor.red),
               ),
-              child: ListTile(
-                onTap: () {},
-                title: Text(
-                  '10',
-                  style: const TextStyle(color: AppColor.red),
-                ),
-                leading: Image.asset(
-                  ImageAsset.logout,
-                  height: 25,
-                  color: AppColor.red,
-                ),
+              leading: Image.asset(
+                ImageAsset.logout,
+                height: 25,
+                color: AppColor.red,
               ),
             ),
           ),

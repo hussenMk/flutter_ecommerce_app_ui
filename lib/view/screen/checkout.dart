@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ecommerce_app_ui/constant/colors.dart';
+import 'package:flutter_ecommerce_app_ui/view/widget/cart/custom_button_cart.dart';
 
 class Checkout extends StatelessWidget {
   const Checkout({super.key});
@@ -17,6 +18,20 @@ class Checkout extends StatelessWidget {
               TextStyle(color: AppColor.darkBlue, fontWeight: FontWeight.bold),
         ),
         centerTitle: true,
+      ),
+      bottomNavigationBar: Container(
+        padding: const EdgeInsets.only(top: 15),
+        decoration: const BoxDecoration(
+          color: AppColor.lightGrey2,
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(30),
+            topRight: Radius.circular(30),
+          ),
+        ),
+        child: CustomButtonCart(
+          text: 'Confirm Payment',
+          onPressed: () {},
+        ),
       ),
       body: Container(
         margin: const EdgeInsets.all(15),
@@ -82,21 +97,6 @@ class Checkout extends StatelessWidget {
                     //         : AppColor.darkBlue),
                   ),
                 ),
-              ),
-            ),
-            SizedBox(height: 30),
-            MaterialButton(
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(8),
-              ),
-              padding:
-                  const EdgeInsets.symmetric(horizontal: 100, vertical: 10),
-              onPressed: () {},
-              color: AppColor.blue,
-              textColor: AppColor.lightGrey,
-              child: Text(
-                "Add To Cart",
-                style: TextStyle(fontWeight: FontWeight.bold),
               ),
             ),
           ],

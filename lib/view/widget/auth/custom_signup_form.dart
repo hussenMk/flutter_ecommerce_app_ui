@@ -14,7 +14,7 @@ class CustomSignUpForm extends StatelessWidget {
         children: [
           const SizedBox(height: 30),
           const CustomTextFormFieldAuth(
-            lable: Text("28"),
+            lable: Text("Enter your username"),
             prefixIcon: Icon(
               Icons.person,
               color: AppColor.blue,
@@ -22,15 +22,15 @@ class CustomSignUpForm extends StatelessWidget {
             suffixIcon: SizedBox(),
           ),
           const CustomTextFormFieldAuth(
-            lable: Text("25"),
-            prefixIcon: const Icon(
+            lable: Text("Enter your email"),
+            prefixIcon: Icon(
               Icons.email,
               color: AppColor.blue,
             ),
-            suffixIcon: const SizedBox(),
+            suffixIcon: SizedBox(),
           ),
           const CustomTextFormFieldAuth(
-            lable: Text("26"),
+            lable: Text("Enter your password"),
             prefixIcon: Icon(
               Icons.lock,
               color: AppColor.blue,
@@ -46,13 +46,11 @@ class CustomSignUpForm extends StatelessWidget {
               borderRadius: BorderRadius.circular(8),
             ),
             padding: const EdgeInsets.all(8),
-            onPressed: () {
-              Navigator.of(context).pushNamed("auth");
-            },
+            onPressed: () => Navigator.of(context).pushNamed('auth'),
             color: AppColor.red,
             textColor: AppColor.lightGrey,
             child: const Text(
-              "23",
+              "SignUp",
               style: TextStyle(
                 fontWeight: FontWeight.bold,
               ),

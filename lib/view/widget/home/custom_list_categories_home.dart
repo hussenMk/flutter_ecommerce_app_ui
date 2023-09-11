@@ -21,7 +21,9 @@ class CustomListCategoriesHome extends StatelessWidget {
           scrollDirection: Axis.horizontal,
           itemBuilder: (context, index) {
             return InkWell(
-                onTap: () {},
+                onTap: () {
+                  Navigator.of(context).pushNamed('items');
+                },
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [

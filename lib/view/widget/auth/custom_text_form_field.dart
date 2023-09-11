@@ -27,7 +27,7 @@ class CustomTextFormFieldAuth extends StatelessWidget {
           fillColor: Colors.black.withOpacity(0.1),
           filled: true,
           label: lable,
-          labelStyle: TextStyle(
+          labelStyle: const TextStyle(
             color: AppColor.blue,
           ),
           contentPadding:

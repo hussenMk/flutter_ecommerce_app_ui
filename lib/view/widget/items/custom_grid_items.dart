@@ -8,14 +8,34 @@ class CustomGridItems extends StatelessWidget {
   Widget build(BuildContext context) {
     List items = [
       {
-        "name": "Iphone 14 Pro",
-        "price": "3799",
-        "image": "assets/images/iphone.png"
+        "name": "Huawei MateBook X Pro",
+        "price": "4799",
+        "image": "assets/images/matebook.png"
       },
       {
         "name": "MacBook Pro M2",
-        "price": "11000",
+        "price": "9800",
         "image": "assets/images/macbook.png"
+      },
+      {
+        "name": "Asus Vivobook",
+        "price": "2800",
+        "image": "assets/images/vivobook.png"
+      },
+      {
+        "name": "Lenovo IdeaPad Slim",
+        "price": "3600",
+        "image": "assets/images/lenovo.png"
+      },
+      {
+        "name": "Dell Latitude",
+        "price": "3200",
+        "image": "assets/images/dell.png"
+      },
+      {
+        "name": "ROG Zephyrus",
+        "price": "6300",
+        "image": "assets/images/rog.png"
       },
     ];
     return GridView.builder(
@@ -39,14 +59,12 @@ class CustomGridItems extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Hero(
-                      tag: "{medicinesModel.id}",
-                      child: Image.asset(
-                        '${items[index]['image']}',
-                        height: 100,
-                        fit: BoxFit.fill,
-                      ),
+                    Image.asset(
+                      '${items[index]['image']}',
+                      height: 100,
+                      fit: BoxFit.fill,
                     ),
+                    const SizedBox(height: 15),
                     Text(
                       '${items[index]['name']}',
                       style: const TextStyle(
@@ -54,8 +72,9 @@ class CustomGridItems extends StatelessWidget {
                           fontWeight: FontWeight.bold,
                           color: AppColor.darkBlue),
                     ),
+                    const SizedBox(height: 10),
                     Text(
-                      "${items[index]['price']} \RS",
+                      "${items[index]['price']} RS",
                       style: const TextStyle(
                         fontSize: 17,
                         color: Color.fromARGB(255, 250, 181, 21),

@@ -14,15 +14,15 @@ class CustomLoginForm extends StatelessWidget {
         children: [
           const SizedBox(height: 30),
           const CustomTextFormFieldAuth(
-            lable: Text("25"),
+            lable: Text("Enter your email"),
             prefixIcon: Icon(
               Icons.email,
               color: AppColor.blue,
             ),
-            suffixIcon: const SizedBox(),
+            suffixIcon: SizedBox(),
           ),
           const CustomTextFormFieldAuth(
-            lable: Text("26"),
+            lable: Text("Enter your password"),
             prefixIcon: Icon(
               Icons.lock,
               color: AppColor.blue,
@@ -35,7 +35,7 @@ class CustomLoginForm extends StatelessWidget {
           InkWell(
             onTap: () {},
             child: const Text(
-              "27",
+              "Forget Password ?",
               textAlign: TextAlign.end,
               style: TextStyle(
                 fontWeight: FontWeight.bold,
@@ -51,12 +51,12 @@ class CustomLoginForm extends StatelessWidget {
             padding: const EdgeInsets.all(8),
             onPressed: () {
               Navigator.of(context)
-                  .pushNamedAndRemoveUntil("home", (route) => true);
+                  .pushNamedAndRemoveUntil("homeScreen", (route) => false);
             },
             color: AppColor.red,
             textColor: AppColor.lightGrey,
             child: const Text(
-              "22",
+              "Login",
               style: TextStyle(
                 fontWeight: FontWeight.bold,
               ),
@@ -75,7 +75,7 @@ class CustomLoginForm extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const Text(
-                  "24",
+                  "Login With Google",
                   style: TextStyle(fontWeight: FontWeight.bold),
                 ),
                 const SizedBox(width: 5),

@@ -6,7 +6,7 @@ class CustomListCategoriesItems extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    int? selectedCat;
+    int? selectedCat = 0;
     List categories = [
       {"name": "Laptops", "image": "assets/images/laptop.png"},
       {"name": "Mobiles", "image": "assets/images/phone.png"},
@@ -26,8 +26,7 @@ class CustomListCategoriesItems extends StatelessWidget {
                 child: Column(
                   children: [
                     Container(
-                      padding:
-                          const EdgeInsets.only(right: 10, left: 10, bottom: 5),
+                      padding: const EdgeInsets.all(8),
                       decoration: selectedCat == index
                           ? BoxDecoration(
                               color: AppColor.darkBlue,

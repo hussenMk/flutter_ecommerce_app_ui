@@ -35,22 +35,28 @@ class CustomCardCart extends StatelessWidget {
             ),
           ),
           Expanded(
-            flex: 2,
-            child: ListTile(
-              title: Text(name,
-                  style: const TextStyle(
-                    fontSize: 15,
-                    fontWeight: FontWeight.bold,
-                    color: AppColor.darkBlue,
-                  )),
-              subtitle: Text("$price\ Rs",
-                  style: const TextStyle(
-                    fontSize: 15,
-                    fontWeight: FontWeight.bold,
-                    color: AppColor.blue2,
-                  )),
-            ),
-          ),
+              flex: 3,
+              child: Column(
+                children: [
+                  Text(
+                    name,
+                    style: const TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      color: AppColor.darkBlue,
+                    ),
+                  ),
+                  const SizedBox(height: 20),
+                  Text(
+                    "$price Rs",
+                    style: const TextStyle(
+                      fontSize: 15,
+                      fontWeight: FontWeight.bold,
+                      color: Color.fromARGB(255, 255, 179, 0),
+                    ),
+                  ),
+                ],
+              )),
           Expanded(
             child: Column(
               children: [

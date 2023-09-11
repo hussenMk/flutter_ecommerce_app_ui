@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ecommerce_app_ui/constant/colors.dart';
-import 'package:flutter_ecommerce_app_ui/view/screen/cart/cart.dart';
+import 'package:flutter_ecommerce_app_ui/view/screen/cart.dart';
+import 'package:flutter_ecommerce_app_ui/view/screen/settings.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 
-import '../settings.dart';
 import 'home.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -39,7 +39,7 @@ class _HomeScreenState extends State<HomeScreen> {
           child: GNav(
             padding: const EdgeInsets.all(8),
             color: AppColor.lightGrey,
-            activeColor: AppColor.red,
+            activeColor: AppColor.blue2,
             gap: 5,
             tabs: const [
               GButton(
@@ -57,11 +57,11 @@ class _HomeScreenState extends State<HomeScreen> {
             ],
             selectedIndex: selectedIndex,
             onTabChange: (index) {
-              setState(() {
-                selectedIndex = index;
-              });
-
-              print(index);
+              setState(
+                () {
+                  selectedIndex = index;
+                },
+              );
             },
           ),
         ),
