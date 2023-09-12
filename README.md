@@ -1,4 +1,4 @@
-# Flutter Ecommerce App 📱
+# Flutter Ecommerce UI 📱
 
 Ecommerce app is open-source for Android & ios. It is build with Dart Language and Google's Flutter Framework.
 
