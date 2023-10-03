@@ -11,7 +11,7 @@ class CustomGridViewTopSellingHome extends StatelessWidget {
     List toopSelling = [
       {
         "name": "Iphone 14 Pro",
-        "price": "3799",
+        "price": "3099",
         "image": "assets/images/iphone.png"
       },
       {
